@@ -735,7 +735,6 @@ function editTask(id){
     soumettre.textContent = "Modifier";
     modal.classList.remove("hidden");
 }
-
 async function updateTask(id, updatedTask) {
 
     try {
@@ -802,5 +801,6 @@ async function updateTask(id, updatedTask) {
         return false;
     }
 }
+
 
 
