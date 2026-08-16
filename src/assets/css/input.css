@@ -1,0 +1,16 @@
+@import "tailwindcss";
+body{
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+@layer components{
+    .btn{
+        @apply bg-blue-700 w-50 rounded-lg  border border-blue-500  max-md:w-full hover:bg-blue-950 hover:border-none transition duration-300 text-white
+        
+    } 
+    .input{
+        @apply outline-none border mt-2 p-1 caret-blue-600 focus:border-blue-500 border-gray-500 rounded-lg placeholder:pl-2 w-full
+    }
+}

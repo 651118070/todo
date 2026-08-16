@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/icons/all.min.css">
+    <link rel="stylesheet" href="./assets/css/output.css">
+</head>
+
+<body>
+    <section class="grid md:grid-cols-[200px_1fr] min-h-screen">
+        <aside class="bg-blue-500 hidden md:flex flex-col">
+            <h1 class="p-4 text-white">Todo App </h1>
+        </aside>
+        <main class="p-3">
+            <nav class="flex sticky top-0 z-30 bg-white max-md:flex-col space-y-3  justify-between p-3">
+                <input class="input w-1/2 max-md:w-full focus:placeholder:text-blue-500" type="text" name="search" id="search" placeholder="rechercher une tache ...">
+                <button id="add" class="btn  h-8">Ajouter une tache</button>
+            </nav>
+        <div class="relative flex items-center justify-end mb-2  gap-2">
+    <i class="absolute -z-2 right-0 fa-solid fa-filter text-blue-500"></i>
+
+    <select
+        name="filter"
+        id="filter"
+        class="outline-none border rounded-lg px-2 py-1 text-blue-500 border-gray-200"
+    >
+        <option value="">Filter By</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+    </select>
+</div>
+           <div id="modal" class="hidden">
+             <div  class="flex fixed  inset-0 z-50  justify-center items-center  p-5">
+                <div id="backdrop" class="absolute inset-0 backdrop-blur-2xl bg-blue-950/30"></div>
+                <form id="form" action="" class="relative h-fit space-y-3  w-1/2 bg-white p-3  rounded-xl border border-gray-50">
+                    <div class="flex justify-between p-1">
+                        <h2 class="">Ajouter une tache</h2>
+                        <span id="closeModal" class=" text-red-500 text-xl cursor-pointer"> &times;</span>
+                    </div>
+<div>
+
+                    <label for="title">
+                        titre <span class="font-bold text-red-500">*</span> <br>
+                        <input id="title" type="text" class="input " placeholder="titre">
+                    </label>
+                    <label for="completed" class="mt-2 block">
+                        <input id="check" name="check" type="checkbox" class="accent-green-600">
+                        <span class="font-bold  text-green-500">Task completed</span>
+                    </label>
+</div>
+                   <div class="flex justify-center gap-2">
+                     <button class="btn bg-transparent text-black" type="reset">Annuler</button>
+                    <button id="soumettre" class="btn " type="submit">Ajouter</button>
+                   </div>
+                </form>
+            </div>
+           </div>
+            
+            <h2 id="loading" class="hidden text-center animate-pulse text-xl">Loading...</h2>
+<section class="grids">
+    <div class="cardContainer grid md:grid-cols-3 gap-2"></div>
+  <div   class="flex items-center justify-between gap-1 mt-6">
+
+    <button id="prev" class="btn">
+        Previous
+    </button>
+
+   <div class="text-nowrap "> <span id="pageNumber" >
+        
+    </span>
+    <span class="text-blue-500" id="totalPage"></span></div>
+
+    <button id="next" class="btn">
+        Next
+    </button>
+
+</div>
+</section>
+        </main>
+    </section>
+    <script src="./assets/css/icons/all.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
