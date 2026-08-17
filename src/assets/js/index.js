@@ -223,7 +223,7 @@ function displayTasks(data = filteredTasks) {
         curentPage.textContent =
             `Page ${currentPage} /`;
 
-        updatePaginationButtons();
+ 
 
         return;
     }
